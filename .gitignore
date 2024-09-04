@@ -1,3 +1,4 @@
+# TailBliss Default .gitignore
 node_modules/
 resources/
 public/
@@ -7,3 +8,18 @@ yarn-error.log
 # Local Netlify folder
 .netlify
 yarn-error.log
+
+# Extended .gitignore
+# Node dependencies
+node_modules/
+
+# Hugo generated files
+public/
+resources/_gen/
+
+# Tailwind output
+assets/css/style.css
+assets/css/style.css.map
+
+# System files
+.DS_Store
