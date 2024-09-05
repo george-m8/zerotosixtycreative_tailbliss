@@ -51,7 +51,7 @@ params:
   og_image: /images/tailbliss-cover.png
   moto: "Super Fast, and Flexible"
   description: "A Hugo theme built with love, using TailwindCSS 3, Alpine.JS, and Hugo Pipes. Images are optimized for use with Hugo Pipes for WebP format."
-  disable_theme_toggle: false
+  disable_theme_toggle: true
   disable_stay_uptodate: false
 
   p1:
@@ -112,76 +112,31 @@ params:
 
 menu:
   main:
-    - identifier: prose
-      name: Prose
-      url: /prose/
+    - identifier: case_studies
+      name: Case Studies
+      url: /categories/case-study/
       weight: 10
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: portfolio
+      name: Portfolio
+      url: /portfolio/
       weight: 20
-    - identifier: categories
-      pre: dropdown
-      name: Categories
-      weight: 30
-    - identifier: dropdown
-      pre: complexdropdown
-      name: Dropdown
-      weight: 40
-    - identifier: contact
+    - identifier: get_in_touch
       name: Contact
       url: /contact/
       weight: 50
-  categories:
-    - identifier: prose
-      name: Prose
-      url: /prose/
-      weight: 10
-    - identifier: about
-      name: About
-      url: /about/
-      weight: 20
-  dropdown:
-    - identifier: appearance
-      pre: stars # can be stars, comments or piechart
-      name: Appearance
-      post: "Easy customization"
-      url: "#"
-      weight: 10
-    - identifier: comments
-      pre: comments # can be stars, comments or piechart
-      name: Comments
-      post: "Check your latest comments"
-      url: "#"
-      weight: 20
-    - identifier: analytics
-      pre: piechart # can be stars, comments or piechart
-      name: Analytics
-      post: "Take a look at your statistics"
-      url: "#"
-      weight: 30
   footer:
-    - identifier: about
-      name: About
-      url: /about/
+    - identifier: case_studies
+      name: Case Studies
+      url: /categories/case-study/
       weight: 10
-    - identifier: blog
-      name: Blog
-      url: /categories/blog/
+    - identifier: portfolio
+      name: Portfolio
+      url: /portfolio/
       weight: 20
-    - identifier: news
-      name: News
-      url: /categories/news/
-      weight: 30
-    - identifier: prose
-      name: Prose
-      url: /prose/
-      weight: 40
-    - identifier: contact
+    - identifier: get_in_touch
       name: Contact
       url: /contact/
       weight: 50
-
 markup:
   goldmark:
     renderer:

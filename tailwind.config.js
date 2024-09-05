@@ -10,17 +10,18 @@ module.exports = {
         transparent: 'transparent',
         current: 'currentColor',
         'primary': {
-          DEFAULT: '#6366F1',
+          DEFAULT: '#FCB8C4',
           50: '#FFFFFF',
-          100: '#F9F9FE',
-          200: '#D3D4FB',
-          300: '#AEAFF8',
-          400: '#888BF4',
-          500: '#6366F1',
-          600: '#3034EC',
-          700: '#1317D1',
-          800: '#0E119E',
-          900: '#0A0C6A'
+          100: '#FFFFFF',
+          200: '#FFFFFF',
+          300: '#FFFFFF',
+          400: '#FEDFE5',
+          500: '#FCB8C4',
+          600: '#FA8297',
+          700: '#F74C6B',
+          800: '#F5173E',
+          900: '#CB092B',
+          950: '#B00725'
         },
         'secondary': {
           DEFAULT: '#EC4899',
@@ -48,6 +49,19 @@ module.exports = {
           800: '#1E2024',
           900: '#050506'
         },
+        'mine-shaft': {  
+          DEFAULT: '#3D3D3D',  
+          50: '#D6D6D6',  
+          100: '#CCCCCC',  
+          200: '#B7B7B7',  
+          300: '#A3A3A3',  
+          400: '#8F8F8F',  
+          500: '#7A7A7A',  
+          600: '#666666',  
+          700: '#515151',  
+          800: '#3D3D3D',  
+          900: '#212121',  
+          950: '#131313'},
         // To change these, use https://www.tailwindshades.com/ with https://tailwindcss.com/docs/customizing-colors or create your own custom colors.
       },
       lineHeight: {

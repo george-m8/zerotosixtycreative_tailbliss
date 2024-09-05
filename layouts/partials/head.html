@@ -24,4 +24,8 @@
 {{ else }}
 {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+
+{{ $customStyles := resources.Get "/css/custom.css" | postCSS }}
+<link rel="stylesheet" href="{{ $customStyles.RelPermalink }}" />
+
 {{ end }}

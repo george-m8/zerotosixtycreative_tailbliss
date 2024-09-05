@@ -1,0 +1,26 @@
+/* Underline Hover Effect */
+.underline-hover-effect {
+    text-decoration: none;
+    position:relative;
+}
+
+.underline-hover-effect::after{
+    content: '';
+    display: block;
+    position:absolute;
+    z-index: -1;
+    bottom:0px;
+    left:0.2em;
+    height: 8px;
+    background: theme('colors.primary.500');
+    width: 0%;
+    transition: width 0.7s ease-in-out; 
+}
+
+.underline-hover-effect:hover::after {
+    width: 100%; 
+}
+
+.underline-hover-effect::after {
+    transition: width 0.7s ease-in-out;
+}

@@ -1,14 +1,11 @@
-<div class="top-0 z-50 w-full text-gray-200 bg-gray-900 border-2 border-gray-900 md:sticky border-b-stone-200/10">
+<div class="top-0 z-50 w-full text-white bg-[#3d3d3d] md:sticky border-b-stone-200/10">
     <div x-data="{ open: false }"
          class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="flex flex-row items-center justify-between p-4">
             <a href="/" class="flex text-gray-100 transition duration-1000 ease-in-out group">
-                <img src="/images/site-logo.svg"
-                     class="transition-opacity h-9 w-9 group-hover:opacity-50 group-focus:opacity-70"
+                <img src="/images/logo-white.png"
+                     class="transition-opacity h-9 w-auto group-hover:opacity-50 group-focus:opacity-70"
                      alt="{{ .Site.Title }} Logo" />
-                <div
-                     class="mt-1 ml-3 text-xl font-black tracking-tight text-gray-100 uppercase transition-colors group-hover:text-gray-400/60">
-                    {{ .Site.Title }}</div>
             </a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" role="navigation" aria-expanded="false" aria-label="Main" aria-controls="menuItems">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -115,7 +112,7 @@
                 </div>
             </div>
             {{ else }}
-            <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline"
+            <a class="underline-hover-effect uppercase mx-4 my-2 text-sm font-semibold"
                 href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
                 {{ .Name }}
             </a>
