@@ -17,7 +17,7 @@
     "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
     "cache": "hugo --gc --cleanDestinationDir",
     "watch:hugo": "hugo server",
-    "build": "hugo --minify",
+    "build": "hugo --config hugo.yaml --minify",
     "test": "hugo"
   },
   "repository": {
