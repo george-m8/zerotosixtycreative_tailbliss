@@ -1,9 +1,9 @@
 ---
 author: TailBliss
-title: "Case Study Post 1"
+title: "Case Studies Post 1"
 date: 2024-09-04T16:36:46+01:00
-categories: "Case Study"
-tags: "Case Study"
+categories: "Case Studies"
+tags: "Case Studies"
 ---
 
 # Testing a case study post

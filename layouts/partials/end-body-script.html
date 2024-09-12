@@ -1,0 +1,7 @@
+<!-- Tiny Slider JS -->
+{{ $tinySliderJs := resources.Get "js/tiny-slider.js" | resources.Fingerprint }}
+<script src="{{ $tinySliderJs.Permalink }}" defer></script>
+
+<!-- Your Slider Initialization Script -->
+{{ $sliderInit := resources.Get "js/slider-init.js"| resources.Fingerprint }}
+<script src="{{ $sliderInit.Permalink }}" defer></script>

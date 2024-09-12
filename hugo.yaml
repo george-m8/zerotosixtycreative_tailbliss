@@ -1,5 +1,5 @@
 baseURL: ''
-title: TailBliss
+title: Zero To Sixty Creative Portfolio
 languageCode: en-us
 DefaultContentLanguage: en
 enableEmoji: true
@@ -46,14 +46,22 @@ markup:
       xhtml: false
 
 params:
-  author: Nusser Studios
+  author: Zero To Sixty Creative
   authorimage: ../assets/images/global/author.webp
   og_image: /images/tailbliss-cover.png
-  moto: "Super Fast, and Flexible"
-  description: "A Hugo theme built with love, using TailwindCSS 3, Alpine.JS, and Hugo Pipes. Images are optimized for use with Hugo Pipes for WebP format."
+  moto: "Get your business up to speed."
+  description: "Take a look at previous websites, designs and projects from Zero To Sixty Creative. Get a better idea of what we can do for you."
   disable_theme_toggle: true
-  disable_stay_uptodate: false
+  disable_stay_uptodate: true
 
+  slides:
+    - image: ""
+    - image: "/images/imac-comp-example.png"
+      link: "#"
+    - image: "/images/imac-comp-skux1.png"
+    - image: "/images/imac-comp-skux2.png"
+    - image: "/images/iphone-msj1.png"
+    - image: "/images/imac-comp-cleveland.png"
   p1:
     heading: "Our mission"
     image: "images/pages/our-mission.png"
@@ -98,27 +106,33 @@ params:
   social_media:
     github:
       enabled: true
-      url: 'https://github.com/nusserstudios'
+      url: 'https://github.com/george-m8'
     facebook:
-      enabled: true
-      url: 'https://facebook.com/nusserstudios'
+      enabled: false
+      url: 'https://facebook.com/'
     instagram:
-      enabled: true
-      url: 'https://instagram.com/nusserstudios'
+      enabled: false
+      url: 'https://instagram.com/'
     twitter:
+      enabled: false
+      url: 'https://twitter.com/'
+    linkedin:
       enabled: true
-      url: 'https://twitter.com/nusserstudios'
+      url: 'https://www.linkedin.com/company/zero-to-sixty-creative/'
+    youtube:
+      enabled: true
+      url: 'https://www.youtube.com/channel/UC-vDj-yXuUzOE3EEMq1HJfg'
     
 
 menu:
   main:
     - identifier: case_studies
       name: Case Studies
-      url: /categories/case-study/
+      url: /categories/case-studies/
       weight: 10
     - identifier: portfolio
       name: Portfolio
-      url: /portfolio/
+      url: /categories/portfolio/
       weight: 20
     - identifier: get_in_touch
       name: Contact
@@ -131,7 +145,7 @@ menu:
       weight: 10
     - identifier: portfolio
       name: Portfolio
-      url: /portfolio/
+      url: /categories/portfolio/
       weight: 20
     - identifier: get_in_touch
       name: Contact

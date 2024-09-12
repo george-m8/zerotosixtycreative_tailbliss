@@ -1,0 +1,9 @@
+/* Text is visible by default when JS is disabled */
+.typing-element {
+    visibility: visible; /* Show by default */
+}
+
+/* Use this class to hide elements right away when JS runs */
+.hidden-before-typing {
+    visibility: hidden;
+}

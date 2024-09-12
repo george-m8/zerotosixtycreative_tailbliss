@@ -15,6 +15,7 @@
   "scripts": {
     "start": "concurrently npm:watch:*",
     "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
+    "cache": "hugo --gc --cleanDestinationDir",
     "watch:hugo": "hugo server",
     "build": "hugo --minify",
     "test": "hugo"
@@ -41,5 +42,9 @@
   "bugs": {
     "url": "https://github.com/nusserstudios/tailbliss/issues"
   },
-  "homepage": "https://github.com/nusserstudios/tailbliss"
+  "homepage": "https://github.com/nusserstudios/tailbliss",
+  "dependencies": {
+    "swiper": "^11.1.12",
+    "tiny-slider": "^2.9.4"
+  }
 }

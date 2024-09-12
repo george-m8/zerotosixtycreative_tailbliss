@@ -24,8 +24,23 @@
 {{ else }}
 {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+{{ end }}
+<!-- End of default imports -->
 
+<!-- Custom styles -->
 {{ $customStyles := resources.Get "/css/custom.css" | postCSS }}
 <link rel="stylesheet" href="{{ $customStyles.RelPermalink }}" />
 
-{{ end }}
+<!-- Custom typed text JS -->
+{{ $typeText := resources.Get "js/typeText.js" | js.Build }}
+<script src="{{ $typeText.RelPermalink }}" defer></script>
+
+<!-- Swiper JS -->
+{{ $swiperJS := resources.Get "js/swiper-setup.js" | js.Build }}
+<script src="{{ $swiperJS.RelPermalink }}"></script>
+{{ $swiperCSS := resources.Get "css/swiper-styles.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $swiperCSS.RelPermalink }}" integrity="{{ $swiperCSS.Data.Integrity }}">
+
+<!-- Tiny Slider CSS -->
+{{ $tinySliderCss := resources.Get "css/tiny-slider.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $tinySliderCss.Permalink }}">

@@ -3,9 +3,14 @@
          class="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
         <div class="flex flex-row items-center justify-between p-4">
             <a href="/" class="flex text-gray-100 transition duration-1000 ease-in-out group">
-                <img src="/images/logo-white.png"
+                <video class="h-9 w-auto" autoplay loop muted playsinline>
+                    <source src="/video/animated-logo-white.webm" type='video/webm; codecs="vp9"'>
+                    <source src="/video/animated-logo-white.mp4" type='video/mp4'>
+                    <img src="/images/logo.png" alt="Zero To Sixty Creative Logo" />
+                </video>
+                <!--<img src="/images/logo-white.png"
                      class="transition-opacity h-9 w-auto group-hover:opacity-50 group-focus:opacity-70"
-                     alt="{{ .Site.Title }} Logo" />
+                     alt="{{ .Site.Title }} Logo" />-->
             </a>
             <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open" role="navigation" aria-expanded="false" aria-label="Main" aria-controls="menuItems">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -25,7 +30,7 @@
             <div @click.away="open = false" class="relative" x-data="{ open: false }">
                 <button @click="open = !open"
                         class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline">
-                    <span>{{ .Name }}</span>
+                    <span>{{- .Name -}}</span>
                     <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                          class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                         <path fill-rule="evenodd"
@@ -88,7 +93,7 @@
             <div @click.away="open = false" class="relative" x-data="{ open: false }">
                 <button @click="open = !open"
                         class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline">
-                    <span>{{ .Name }}</span>
+                    <span>{{- .Name -}}</span>
                     <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                          class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                         <path fill-rule="evenodd"
@@ -112,10 +117,12 @@
                 </div>
             </div>
             {{ else }}
-            <a class="underline-hover-effect uppercase mx-4 my-2 text-sm font-semibold"
-                href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
-                {{ .Name }}
-            </a>
+            <div class="mx-4 my-2">
+                <a class="underline-hover-effect inline-block uppercase text-sm font-semibold z-20"
+                    href="{{ .URL | absLangURL }}" title="{{- .Title | default .Name -}}">
+                    {{- .Name -}}
+                </a>
+            </div>
             {{ end }}
             {{ end }}
             {{ if not .Site.Params.Disable_theme_toggle }}
