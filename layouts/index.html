@@ -22,7 +22,7 @@
                         {{ range .Site.Params.slides }}
                             <div class="slide">
                                 {{ if .link }}
-                                    <a href="{{ .link }}" target="_blank">
+                                    <a href="{{ .link }}">
                                         <img src="{{ .image }}" class="w-full object-fit object-center"/>
                                     </a>
                                 {{ else }}
