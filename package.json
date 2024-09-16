@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/nusserstudios/tailbliss",
   "dependencies": {
-    "swiper": "^11.1.12",
+    "swiper": "^11.1.14",
     "tiny-slider": "^2.9.4"
   }
 }
