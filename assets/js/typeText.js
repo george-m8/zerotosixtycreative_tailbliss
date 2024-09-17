@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // List of selectors to be animated in order
     const selectorsToAnimateA = ["nav a"];  // You can add more selectors as needed
     const selectorsToAnimateB = ["h1, h2"];  // You can add more selectors as needed
+    const selectorsToAnimateC = [".post-template-title>a"];
 
     // Immediately hide all elements on load
     [selectorsToAnimateA, selectorsToAnimateB].forEach(selector => {
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Start typing animations for the given selectors in sequence
     setTimeout(() => {
         typeElementsInSequence(selectorsToAnimateA, 40);
-        typeElementsInSequence(selectorsToAnimateB, 40); // Faster typing speed: 20ms per character
+        typeElementsInSequence(selectorsToAnimateB, 40);
+        typeElementsInSequence(selectorsToAnimateC, 40);
     });
 });

@@ -23,8 +23,8 @@ body {
 }
 
 /* Custom CSS */
-.prose :where(h1):not(:where([class~="not-prose"] *)) {
+/*.prose :where(h1):not(:where([class~="not-prose"] *)) {
     color: white !important;
-}
+}*/
 
 /* Custom CSS end */
