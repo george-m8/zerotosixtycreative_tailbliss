@@ -4,32 +4,40 @@
             {{ range .Paginator.Pages }}
             <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
                 <a href="{{.Permalink}}">
-                    {{ with .Params.featured_image }}
-                    {{ with resources.Get . }}
-                    {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
-                    <img src="{{ $postimage }}" class="object-fill overflow-hidden rounded-t-lg" width="100%" height=""
-                         loading="lazy" alt="{{ .Title }}" />
+                    {{ $featured_image := .Params.featured_image }}
 
+                    <!-- Try to get the image from the Page Bundle -->
+                    {{ $image := .Resources.GetMatch $featured_image }}
+                
+                    <!-- If not found in Page Bundle, try static images directory -->
+                    {{ if not $image }}
+                        {{ $image = resources.Get (print "images/" $featured_image) }}
                     {{ end }}
+                
+                    <!-- Now use the $image variable for resizing and rendering -->
+                    {{ with $image }}
+                        {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
+                        <img src="{{ $postimage }}" class="object-fill overflow-hidden rounded-t-lg" width="100%" height=""
+                             loading="lazy" alt="{{ .Title }}" />
                     {{ end }}
                 </a>
                 <div class="p-6">
-                    <div class="flex-1">
+                    <div class="flex-1 post-template-title">
                         <a href="{{.Permalink}}"
-                           class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-100 dark:hover:text-primary-100 hover:underline">
+                           class="block uppercase mt-2 text-2xl font-black text-gray-900 hover:text-primary-500 hover:underline">
                             {{- .Title -}}
                         </a>
                         <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
                             {{ .Params.summary }}
                         </p>
                     </div>
-                    <div class="flex pt-6 font-medium text-primary-100 dark:text-primary-100 text-md">
-                        <span class="pr-2 font-black">Tags:</span>
+                    <div class="flex pt-6 font-medium text-primary-500 dark:text-primary-100 text-md">
+                        <span class="pr-2 font-black text-primary-500">Tags:</span>
                         <span>
                         {{ range $elem_index, $elem_val := (.GetTerms "tags") }}
                         {{- if gt $elem_index 0 }}, {{ end -}}
                         <a href="{{ .Permalink }}"
-                           class="inline-flex items-center rounded-md bg-gray-300 hover:bg-primary-100 hover:text-black px-2.5 py-0.5 text-sm font-medium text-gray-900 capitalize">{{ .LinkTitle }}</a>
+                           class="inline-flex items-center rounded-md bg-gray-300 hover:bg-primary-500 hover:text-white px-2.5 py-0.5 text-sm font-medium text-gray-900 capitalize">{{ .LinkTitle }}</a>
                         {{- end -}}
                         </span>
                     </div>

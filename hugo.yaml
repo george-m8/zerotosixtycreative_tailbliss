@@ -1,5 +1,5 @@
 baseURL: ''
-title: Zero To Sixty Creative Portfolio
+title: Zero To Sixty Creative
 languageCode: en-us
 DefaultContentLanguage: en
 enableEmoji: true
@@ -7,8 +7,6 @@ enableGitInfo: true
 enableRobotsTXT: true
 canonifyURLs: true
 paginate: 9
-darkmode_js:
-  - assets/js/darkmode.js
 enableInlineShortcodes: true
 
 markup:
@@ -47,7 +45,7 @@ markup:
 
 params:
   author: Zero To Sixty Creative
-  authorimage: ../assets/images/global/author.webp
+  authorimage: ../assets/images/global/logoSquare.png
   og_image: /images/tailbliss-cover.png
   moto: "Get your business up to speed."
   description: "Take a look at previous websites, designs and projects from Zero To Sixty Creative. Get a better idea of what we can do for you."
@@ -69,11 +67,13 @@ params:
       - text: "Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae."
       - text: "Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin tristique eroserat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna."
       - text: "Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra."
+  # Not in use
   p2:
     heading: "Just in time for Hacktoberfest with JIT Tailwind."
     image: "images/pages/hacktoberfest.jpg"
     content:
       - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at purus non enim commodo tincidunt vel in nulla. Aenean pretium dolor non ultricies bibendum. Etiam quis blandit enim. Nunc condimentum ut lorem in faucibus. Phasellus varius ligula et commodo tristique. Nunc sodales nisl nec laoreet vehicula. Donec velit nibh, sollicitudin at nulla a, egestas dignissim eros. Sed lacinia hendrerit interdum. Vestibulum pellentesque sem venenatis nisl tempor accumsan sit amet tempus felis. Mauris leo diam, porttitor nec bibendum id, tempus ac nulla. Etiam congue ornare erat at convallis. Donec in nisi dapibus, mattis risus vel, imperdiet enim. Donec fermentum sit amet tortor nec tincidunt. Nam nec lectus tortor. Nunc sit amet laoreet orci, porta ornare massa. Phasellus eget lorem mi. Nam eleifend ultricies sapien, quis mollis leo bibendum at. Quisque viverra lorem sit amet magna aliquet, et dignissim arcu eleifend."
+  # Not in use
   p3:
     heading: "Backed by world-renowned investors"
     content:
@@ -91,9 +91,10 @@ params:
       - identifier: e
       - identifier: f
   p4:
-    heading: "From the blog"
+    heading: "Previous Work"
     content:
-      - text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed."
+      - text: "Portfolio examples and case studies from Zero To Sixty Creative."
+  # Not in use
   p5:
     heading: "Stay Up to Date"
     content:
@@ -134,23 +135,15 @@ menu:
       name: Portfolio
       url: /categories/portfolio/
       weight: 20
-    - identifier: get_in_touch
-      name: Contact
-      url: /contact/
-      weight: 50
   footer:
     - identifier: case_studies
       name: Case Studies
-      url: /categories/case-study/
+      url: /categories/case-studies/
       weight: 10
     - identifier: portfolio
       name: Portfolio
       url: /categories/portfolio/
       weight: 20
-    - identifier: get_in_touch
-      name: Contact
-      url: /contact/
-      weight: 50
 markup:
   goldmark:
     renderer:
