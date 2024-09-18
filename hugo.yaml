@@ -1,5 +1,5 @@
 baseURL: ''
-title: Zero To Sixty Creative Portfolio
+title: Zero To Sixty Creative
 languageCode: en-us
 DefaultContentLanguage: en
 enableEmoji: true
@@ -45,7 +45,7 @@ markup:
 
 params:
   author: Zero To Sixty Creative
-  authorimage: ../assets/images/global/author.webp
+  authorimage: ../assets/images/global/logoSquare.png
   og_image: /images/tailbliss-cover.png
   moto: "Get your business up to speed."
   description: "Take a look at previous websites, designs and projects from Zero To Sixty Creative. Get a better idea of what we can do for you."
