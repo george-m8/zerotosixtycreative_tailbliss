@@ -15,9 +15,10 @@
   "scripts": {
     "start": "concurrently npm:watch:*",
     "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css",
     "cache": "hugo --gc --cleanDestinationDir",
     "watch:hugo": "hugo server",
-    "build": "hugo --config hugo.yaml --minify --verbose",
+    "build": "npm run build:css && hugo --config hugo.yaml --minify --verbose",
     "test": "hugo"
   },
   "repository": {
