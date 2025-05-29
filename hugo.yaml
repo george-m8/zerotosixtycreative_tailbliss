@@ -56,8 +56,11 @@ params:
     - image: ""
     - image: "/images/imac-comp-example.png"
       link: "#"
+    - image: "/images/different-hats-mockup-2.png"
+    - image: "/images/ethica-mockup.png"
     - image: "/images/imac-comp-skux1.png"
     - image: "/images/imac-comp-skux2.png"
+    - image: "/images/verenigma-mockup.png"
     - image: "/images/iphone-msj1.png"
     - image: "/images/imac-comp-cleveland.png"
   p1:
