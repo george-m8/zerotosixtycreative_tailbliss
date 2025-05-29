@@ -19,7 +19,7 @@ On a number of occassions, I've found myself searching for a good way to make te
 
 Still, none of the solutions I've found have quite hit the mark...
 
-## Pure CSS Solutions
+## Pure CSS solutions
 It's amazing what can be done with CSS, particularly CSS solutions. Javascript can almost be forgotten in favour of easy to set up CSS transitions and animations. Great for buttons, good for emphasis, but finnicky when trying to handle more advanced animations. Still, no JavaScript is required and we can all agree that that's generally a good thing. 
 
 When it comes to typewriter effects, CSS leaves a little to desire. Typical implementations force the text not to wrap and reveal text by increasing its container's width and revealling the content. And ::after selector can also be used with animation to add a blinking cursor to the end of the text, but this will not be removed once the line finishes typing.
@@ -60,7 +60,7 @@ I've also prepared some example scripts to type text or elements simultaneously.
 
 What's more, typeTextJS can preserve the space of the original element to prevent layout issues. This is used on this site so that the navigation doesn't 'grow' from the right hand side, just being typed in the place they will stay. This is handled by making the elements transparent, instead of using `display:none;` or `visibility:hidden;`. 
 
-**Important Note:** Preserving space comes at the cost of the cursor. Since the space is preserved the cursor would just hang around at the end of the sentence until the text meets it. The cursor class is not added if space is preserved. More on this later.
+**Important note:** Preserving space comes at the cost of the cursor. Since the space is preserved the cursor would just hang around at the end of the sentence until the text meets it. The cursor class is not added if space is preserved. More on this later.
 
 **No JavaScript?** No problem! Without JavaScript the text will never be hidden in the first place. Read away just without cool animations.
 
@@ -78,7 +78,7 @@ I love CSS, it's relatively simple and very effective. For simple things like a 
 **There's one line of text that looks weird with a cursor?** Just style that with overruling CSS so that it has no cursor when applied.
 
 ## Collaboration
-I've built this tool for me and it works well. I'd be flattered if others used it too. It serves my purposes but could certainly improved. If anyone has any improvements then I'd love to collaborate via GitHub. My focus is on ensuring this is easy to set up and use to make simple but interesting animation.
+I've built this tool for me and it works well. I'd be flattered if others used it too. It serves my purposes but could certainly be improved. If anyone has any improvements then I'd love to collaborate via GitHub. My focus is on ensuring this is easy to set up and use to make simple but interesting animation.
 
 ## Find out more
 **Take a deeper look, clone, and collaborate via <a href="https://github.com/george-m8/typeTextJS" target="_blank">my Github</a>.**

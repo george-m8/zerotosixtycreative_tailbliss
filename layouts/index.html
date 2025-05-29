@@ -210,19 +210,21 @@
                             </a>
                             <div class="p-6">
                                 <div class="flex-1">
-                                    <a href="{{.Permalink}}" class="block mt-2 text-2xl font-black text-gray-900 hover:text-primary-500 hover:underline">
+                                    <a href="{{.Permalink}}" class="block uppercase mt-2 text-2xl font-black text-gray-900 hover:underline">
                                         {{ .Title }}
                                     </a>
                                     <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
                                         {{ .Params.summary }}
                                     </p>
                                 </div>
-                                <div class="flex pt-6 font-medium text-primary-100 dark:text-primary-100 text-md">
+                                <div class="post-tags flex pt-6 font-medium text-primary-500 uppercase text-md">
                                     <span class="pr-2 font-black text-primary-500">Tags:</span>
+                                    <span>
                                     {{ range $elem_index, $elem_val := (.GetTerms "tags") }}
-                                    {{- if gt $elem_index 0 }}, {{ end -}}
-                                    <a href="{{ .Permalink }}" class="inline-flex items-center rounded-md bg-gray-300 hover:bg-primary-100 hover:text-black px-2.5 py-0.5 text-sm font-medium text-gray-900 ">{{ .LinkTitle }}</a>
+                                    <a href="{{ .Permalink }}"
+                                       class="inline-flex underline-hover-effect z-10 items-center py-0.5 mx-1 text-sm font-medium text-gray-900 uppercase">{{ .LinkTitle }}</a>
                                     {{- end -}}
+                                    </span>
                                 </div>
                                 <div class="flex items-center mt-6">
                                     <div class="flex-shrink-0">

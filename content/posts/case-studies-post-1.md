@@ -1,6 +1,7 @@
 ---
 author: TailBliss
 title: "Case Studies Post 1"
+draft: true
 date: 2024-09-04T16:36:46+01:00
 authorimage: ../assets/images/global/logoSquare.png
 categories: "Case Studies"
