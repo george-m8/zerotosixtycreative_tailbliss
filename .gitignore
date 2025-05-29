@@ -21,5 +21,8 @@ resources/_gen/
 assets/css/style.css
 assets/css/style.css.map
 
+# Python environment
+venv/
+
 # System files
 .DS_Store
