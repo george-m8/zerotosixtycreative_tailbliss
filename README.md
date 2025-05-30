@@ -1,3 +1,37 @@
+# Zero To Sixty Creative Portfolio Website
+
+*Made with Hugo and NPM*
+
+This repo stores the files required to build the Zero To Sixty Creative portfolio website using Hugo and NPM.
+
+## Issues
+
+- On homepage blog titles do not underline on hover
+- On blog listing pages titles type out. However, first title will hide then type, afterwards second title will hide and then type. All titles should hide then be typed one after another
+- I've resized images down to 900px but this might be too small for some displays. What is optimum size?
+
+## Ideas
+
+- Create page for all posts
+- Update all images to use MacBook mockup template
+- Change image shortcodes to srcset shortcode: `{{< imgc src="img-name.jpg" alt="Place alt text here." >}}`
+- Create some sort of lightbox effect for images in posts
+- Create contact page using similar styling to home page
+
+## Posts/Pages
+
+- Contact page
+- All posts page
+- Whoopsadaisy, fixing a website
+- Whoopsadaisy, brand update
+- Verenigma website
+- Verenigma research on machine learning
+- Verenigma survey library
+- Cleveland renewables portfolio post
+- Ideal Cars Sussex logo update
+
+## Orignal `readme.md` from Nusser Studios
+
 **Install to VS Code with:**  
 `git clone git@github.com:nusserstudios/tailbliss your-name`
 
