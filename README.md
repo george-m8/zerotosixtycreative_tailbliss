@@ -17,6 +17,7 @@ This repo stores the files required to build the Zero To Sixty Creative portfoli
 - Change image shortcodes to srcset shortcode: `{{< imgc src="img-name.jpg" alt="Place alt text here." >}}`
 - Create some sort of lightbox effect for images in posts
 - Create contact page using similar styling to home page
+- Add a filler item within post listings that will have a CTA like "Get in touch" to take up last space
 
 ## Posts/Pages
 
