@@ -45,6 +45,7 @@
   },
   "homepage": "https://github.com/nusserstudios/tailbliss",
   "dependencies": {
+    "hugo-bin": "^0.145.2",
     "swiper": "^11.1.12",
     "tiny-slider": "^2.9.4"
   }
