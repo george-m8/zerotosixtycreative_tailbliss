@@ -4,12 +4,12 @@
   "description": "Hugo + Alpine.js + TailwindCSS",
   "main": "index.js",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.15",
+    "@tailwindcss/typography": "^0.5.16",
     "alpinejs": "^3.14.7",
     "autoprefixer": "^10.4.20",
-    "concurrently": "^9.1.0",
-    "postcss": "^8.4.44",
-    "postcss-cli": "^11.0.0",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.4",
+    "postcss-cli": "^11.0.1",
     "tailwindcss": "^3.4.16"
   },
   "scripts": {
@@ -46,7 +46,7 @@
   "homepage": "https://github.com/nusserstudios/tailbliss",
   "dependencies": {
     "hugo-bin": "^0.145.2",
-    "swiper": "^11.1.12",
+    "swiper": "^11.2.8",
     "tiny-slider": "^2.9.4"
   }
 }
