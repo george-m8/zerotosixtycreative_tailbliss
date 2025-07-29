@@ -15,9 +15,9 @@
                 
                     <!-- Now use the $image variable for resizing and rendering -->
                     {{ with $image }}
-                        {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
-                        <img src="{{ $postimage }}" class="object-fill overflow-hidden rounded-t-lg" width="100%" height=""
-                             loading="lazy" alt="{{ .Title }}" />
+                        {{ $resized := .Resize "500x webp q90" }}
+                        <img src="{{ $resized.RelPermalink }}" class="object-fill overflow-hidden rounded-t-lg" width="100%" height=""
+                             loading="lazy" alt="{{ $.Title }}" />
                     {{ end }}
                 </a>
                 <div class="p-6">
@@ -44,8 +44,8 @@
                             <span class="sr-only">{{ .Params.author }}</span>
                             {{ with .Params.authorimage }}
                             {{ with resources.Get . }}
-                            {{ $authorimage := (.Resize "40x webp").RelPermalink }}
-                            <img class="w-10 h-10 rounded-full" src="{{ $authorimage }}" alt="">
+                            {{ $resized := .Resize "40x webp" }}
+                            <img class="w-10 h-10 rounded-full" src="{{ $resized.RelPermalink }}" alt="">
                             {{ end }}
                             {{ end }}
                         </div>
@@ -63,6 +63,11 @@
                 </div>
             </div>
             {{ end }}
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
+                <p class="p-6 text-center">Want to find out more?</p>
+                <p class="p-6 text-center">Get in touch</p>
+                <p class="p-6 text-center"><a href="mailto:hello@zerotosixtycreative.co.uk">hello@zerotosixtycreative.co.uk</a></p>
+            </div>
         </div>
     </div>
 </div>

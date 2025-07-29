@@ -18,7 +18,7 @@
     "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css",
     "cache": "hugo --gc --cleanDestinationDir",
     "watch:hugo": "hugo server",
-    "build": "npm run build:css && hugo --config hugo.yaml --minify --verbose",
+    "build": "npm run build:css && hugo --config hugo.yaml --minify",
     "test": "hugo"
   },
   "repository": {

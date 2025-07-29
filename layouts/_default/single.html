@@ -21,16 +21,16 @@
       
       <!-- Now use the $image variable for resizing and srcset logic -->
       {{ with $image }}
-          {{ $small := (.Resize "400x webp q80").RelPermalink }}
-          {{ $medium := (.Resize "550x webp q80").RelPermalink }}
-          {{ $large := (.Resize "900x webp q80").RelPermalink }}
-          {{ $featuredimage := (.Resize "1500x webp q80").RelPermalink }}
+          {{ $small := .Resize "400x webp q80" }}
+          {{ $medium := .Resize "550x webp q80" }}
+          {{ $large := .Resize "900x webp q80" }}
+          {{ $featuredimage := .Resize "1500x webp q80" }}
           
-          <img src="{{ $featuredimage }}" srcset="
-              {{- with $small -}}{{.}} 400w,{{- end -}}
-              {{- with $medium -}}{{.}} 550w,{{- end -}}
-              {{- with $large -}}{{.}} 768w,{{- end -}}
-              {{- with $featuredimage -}}{{.}} 1100w{{- end -}}"
+          <img src="{{ $featuredimage.RelPermalink }}" srcset="
+              {{- with $small -}}{{ .RelPermalink }} 400w,{{- end -}}
+              {{- with $medium -}}{{ .RelPermalink }} 550w,{{- end -}}
+              {{- with $large -}}{{ .RelPermalink }} 768w,{{- end -}}
+              {{- with $featuredimage -}}{{ .RelPermalink }} 1100w{{- end -}}"
               loading="lazy"
               class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
               width="100%" alt="{{ .Params.title }}" />
