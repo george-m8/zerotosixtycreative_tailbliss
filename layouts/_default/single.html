@@ -9,20 +9,39 @@
   </header>
   <div class="max-w-4xl mx-auto mt-8 mb-2">
     <div class="px-6">
-      {{ with .Params.featured_image }}
-      {{ with resources.Get . }}
-      {{ $small := (.Resize "400x webp q80").RelPermalink }}
-      {{ $medium := (.Resize "550x webp q80").RelPermalink }}
-      {{ $large := (.Resize "900x webp q80").RelPermalink }}
-      {{ $featuredimage := (.Resize "1500x webp q80").RelPermalink }}
-      <img src="{{ $featuredimage }}" srcset="
-        {{- with $small -}}, {{.}} 400w{{- end -}}
-        {{- with $medium -}}, {{.}} 550w{{- end -}}
-        {{- with $large -}}, {{.}} 768w{{- end -}}
-        {{- with $featuredimage -}}, {{.}} 1100w{{- end -}}"
-           class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
-           width="100%" alt="{{ .Params.title }}" />
+      {{ $featured_image := default "images/featured/featured-img-placeholder.png" .Params.featured_image }}
+      
+      <!-- Debug: Print the featured image path -->
+      <!-- {{ printf "Featured image path: %s" $featured_image }} -->
+      
+      {{ $image := "" }}
+      
+      <!-- First try to get from page resources (page bundle) -->
+      {{ with .Resources.GetMatch $featured_image }}
+        {{ $image = . }}
+      {{ else }}
+        <!-- Then try to get from assets folder -->
+        {{ with resources.Get $featured_image }}
+          {{ $image = . }}
+        {{ else }}
+          <!-- Finally try without the images/ prefix -->
+          {{ with resources.Get (printf "images/%s" $featured_image) }}
+            {{ $image = . }}
+          {{ end }}
+        {{ end }}
       {{ end }}
+      
+      {{ with $image }}
+        <!-- Simple resize without WebP conversion first -->
+        {{ $resized := .Resize "800x" }}
+        <img src="{{ $resized.RelPermalink }}" 
+            class="object-fill overflow-hidden rounded-lg shadow-lg ring-4 ring-zinc-300/40 dark:ring-gray-900/40 shadow-neutral-100/20 dark:shadow-neutral-800/40"
+            width="100%" alt="{{ $.Title }}" />
+      {{ else }}
+        <!-- Fallback for when no image is found -->
+        <div class="bg-gray-200 h-64 flex items-center justify-center">
+          <p>No featured image found</p>
+        </div>
       {{ end }}
     </div>
   </div>
