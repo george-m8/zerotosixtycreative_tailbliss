@@ -6,8 +6,10 @@ enableEmoji: true
 enableGitInfo: true
 enableRobotsTXT: true
 canonifyURLs: true
-paginate: 9
 enableInlineShortcodes: true
+
+pagination:
+  pagerSize: 9
 
 markup:
   goldmark:
